@@ -1,0 +1,18 @@
+package org.filewriting.java;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class UsingFileOutputStream {
+public static void main(String[] args) throws IOException {
+	String location="UsingFOS.txt";
+	String content="Cheer UP";
+
+	FileOutputStream outputStream =new FileOutputStream(location);
+	byte[] bytes = content.getBytes();
+	outputStream.write(bytes);
+	outputStream.close();
+
+}
+}
