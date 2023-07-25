@@ -1,0 +1,19 @@
+package org.filewriting.java;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Usingfile_Writer {
+public static void main(String[] args) throws IOException {
+		//We need Two things	1.File Location 2.content
+ String location ="UsingFileWriter.txt";	
+ String content ="Learning Java is simple";
+ 
+ FileWriter filewriter =new FileWriter(location);
+ filewriter.write(content);
+ filewriter.close();
+}
+}
+
+//file writer directly interact with file, Its a cosly operations so performce will low because 
+//we go for Buffered writer and its a temporary storage
