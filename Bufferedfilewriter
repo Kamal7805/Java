@@ -1,0 +1,20 @@
+package org.filewriting.java;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class UsingBuffered_Writer {
+public static void main(String[] args) throws IOException {
+	//Easiest way and performance wise better and widely used
+
+	String location ="UsingBufferedWriter.txt";
+	String content ="Java is a programming language";
+
+	FileWriter filewriter =new FileWriter(location);
+	BufferedWriter bufferedWriter =new BufferedWriter(filewriter);
+	bufferedWriter.write(content);
+	bufferedWriter.close();
+
+}
+}
